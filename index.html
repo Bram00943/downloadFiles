@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Download Files</title>
+</head>
+<body>
+
+<button onclick="downloadFiles()">
+  Download
+</button>
+
+<script>
+function downloadFiles() {
+  const files = [
+    "images/elon.jpg",
+    "images/Rickrolletje2.png",
+    "files/carsVid.mp4",
+    "files/testing.py",
+    "files/Shoot2.mp3"
+  ];
+
+  files.forEach(file => {
+    const a = document.createElement("a");
+    a.href = file;
+    a.download = file;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  });
+}
+</script>
+
+</body>
+</html>
