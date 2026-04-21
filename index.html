@@ -5,9 +5,37 @@
 </head>
 <body>
 
+<style>
+  .imgHeight {
+    height: 250px;
+    width: 250px;
+  }
+  .container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;    /* horizontal center */
+  align-items: center;        /* vertical center */
+}
+
+.border {
+  border: 1px solid black;
+  padding: 20px;
+  text-align: center;
+}
+</style>
 <button id="button" class="button" onclick="downloadFiles()">
   Download
 </button>
+
+<div class="container">
+  <div class="border">
+    <h1>Mango 1 piece</h1>
+    <img id="mango" class="imgHeight" src="/images/Mango.png" alt="mango">
+    <p>Hele lekkere mango.</p>
+    <div id="price">&euro;2.99</div>
+  </div>
+</div>
+
 
 <script>
 function downloadFiles() {
